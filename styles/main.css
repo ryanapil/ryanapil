@@ -1,0 +1,177 @@
+body {
+    background-image: url("../images/nathan-da-silva-k-rKfqSm4L4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg,
+        rgba(244, 59, 71, 0.75),
+        rgba(69, 58, 148, 0.75),
+        rgba(254, 225, 64, 0.75),
+        rgba(250, 112, 154, 0.75),
+        rgba(67, 233, 123, 0.75),
+        rgba(56, 249, 215, 0.75),
+        rgba(79, 172, 254, 0.75),
+        rgba(0, 242, 254, 0.75),
+        rgba(51, 8, 103, 0.75),
+        rgba(48, 207, 208, 0.75));
+	background-size: 1000% 1000%;
+	animation: gradient 90s ease-in-out infinite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 128px;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header img.left,
+header img.right {
+    width: auto;
+    height: 240px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    header img.left,
+    header img.right {
+        rotate: 90deg;
+    }
+    header img.left {
+        margin-bottom: -88px;
+    }
+    header img.right {
+        margin-top: -88px;
+    }
+    div.container {
+        gap: 16px 0px !important;
+        grid-template-areas:
+            "aside aside"
+            "article article" !important;
+    }
+    img.memoji {
+        margin: 0 auto;
+    }
+    article h1 {
+        text-align: center;
+    }
+    header svg.narrow {
+        display: block !important;
+    }
+    header svg.wide {
+        display: none !important;
+    }
+}
+
+header img.clarus {
+    width: 240px;
+    height: auto;
+    margin: 0 32px;
+    padding: 32px 0;
+}
+
+header svg.narrow,
+header svg.wide {
+    width: 100%;
+    height: 128px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+header svg.narrow {
+    display: none;
+}
+header svg.wide {
+    display: block;
+}
+
+main {
+    min-height: calc(100vh - 192px);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container {
+    max-width: 768px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 72px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 128px;
+    grid-template-rows: 198px 1fr;
+    gap: 0px 48px;
+    grid-template-areas:
+        "article aside"
+        "article aside";
+}
+
+div.container aside {
+    grid-area: aside;
+}
+
+div.container article {
+    grid-area: article;
+}
+
+img.memoji {
+    width: 152px;
+    max-width: 152px;
+    height: auto;
+    animation: pulse 5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+article h1 {
+    margin-top: 0px;
+}
+
+article h1 span {
+    opacity: 0.25;
+}
+
+
+article a {
+    display: inline-block;
+    margin-right: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    transition: color 150ms ease;
+}
+article a:hover {
+    color: rgba(0, 0, 0, 0.2175);
+}
