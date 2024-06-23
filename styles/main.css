@@ -29,6 +29,7 @@ header {
     justify-content: center;
     padding-bottom: 128px;
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 @keyframes gradient {
