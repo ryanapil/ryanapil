@@ -75,12 +75,6 @@ header img.right {
     article h1 {
         text-align: center;
     }
-    header svg.narrow {
-        display: block !important;
-    }
-    header svg.wide {
-        display: none !important;
-    }
 }
 
 header img.clarus {
@@ -90,19 +84,12 @@ header img.clarus {
     padding: 32px 0;
 }
 
-header svg.narrow,
-header svg.wide {
+header svg.wave {
     width: 100%;
     height: 128px;
     position: absolute;
     bottom: 0;
     left: 0;
-}
-header svg.narrow {
-    display: none;
-}
-header svg.wide {
-    display: block;
 }
 
 main {
@@ -116,6 +103,7 @@ main {
 
 div.container {
     max-width: 768px;
+    padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 72px;
